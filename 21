@@ -1,0 +1,9 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Name':['Alex','JOHN','mArY','Steve']
+})
+
+df['Swapped_Name'] = df['Name'].str.swapcase()
+
+print(df)
