@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Volume':[2000,3500,2800,4000,5000],
+    'Close':[140,145,143,150,155]
+}
+
+df = pd.DataFrame(data)
+
+plt.scatter(df['Volume'], df['Close'])
+
+plt.title("Volume vs Stock Price")
+plt.xlabel("Volume")
+plt.ylabel("Close Price")
+plt.show()
