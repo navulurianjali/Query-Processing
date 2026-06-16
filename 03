@@ -1,0 +1,15 @@
+import pandas as pd
+
+jobs = {
+    'job_id':['IT1','HR1','MK1','AC1'],
+    'job_title':['Programmer',
+                 'HR Manager',
+                 'Marketing Executive',
+                 'Accountant']
+}
+
+df = pd.DataFrame(jobs)
+
+result = df.sort_values(by='job_title', ascending=False)
+
+print(result)
