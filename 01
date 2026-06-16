@@ -1,0 +1,11 @@
+import pandas as pd
+
+employees = {
+    'employee_id':[101,102,103,104,105,106],
+    'department_id':[10,20,10,30,20,40]
+}
+
+df = pd.DataFrame(employees)
+
+print("Distinct Department IDs:")
+print(df['department_id'].unique())
