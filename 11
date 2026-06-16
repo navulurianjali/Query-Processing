@@ -1,0 +1,18 @@
+import pandas as pd
+import numpy as np
+
+np.random.seed(1)
+
+df = pd.DataFrame(np.random.randn(10,4),
+                  columns=['A','B','C','D'])
+
+df.iloc[1,2] = np.nan
+df.iloc[4,1] = np.nan
+df.iloc[7,3] = np.nan
+
+def highlight_nan(val):
+    if pd.isna(val):
+        return 'background-color: yellow'
+    return ''
+
+df.style.map(highlight_nan)
