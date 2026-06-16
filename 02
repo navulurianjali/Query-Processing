@@ -1,0 +1,13 @@
+import pandas as pd
+
+job_history = {
+    'employee_id':[101,101,102,103,103,103,104],
+    'job_id':['IT1','IT2','HR1','MK1','MK2','MK3','AC1']
+}
+
+df = pd.DataFrame(job_history)
+
+job_count = df.groupby('employee_id')['job_id'].count()
+
+print("Employees with 2 or more jobs:")
+print(job_count[job_count >= 2])
