@@ -1,0 +1,11 @@
+import pandas as pd
+
+data = {
+    'Name':['Alex','John','Alexander','Steve']
+}
+
+df = pd.DataFrame(data)
+
+df['Position'] = df['Name'].str.find('Alex')
+
+print(df)
