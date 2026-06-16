@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Date':['03-10-2016','04-10-2016',
+            '05-10-2016','06-10-2016',
+            '07-10-2016'],
+    'Close':[772,776,778,780,785]
+}
+
+df = pd.DataFrame(data)
+
+plt.plot(df['Date'],df['Close'],marker='o')
+
+plt.title("Alphabet Financial Data")
+plt.xlabel("Date")
+plt.ylabel("Closing Price")
+
+plt.show()
