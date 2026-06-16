@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = {
+    'Country':['India','USA','UK'],
+    'Beer':[2,5,4],
+    'Spirit':[3,7,5],
+    'Wine':[1,4,2]
+}
+
+df = pd.DataFrame(data)
+
+print("Shape:", df.shape)
+
+print("\nColumns:")
+print(df.columns)
